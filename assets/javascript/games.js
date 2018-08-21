@@ -1,63 +1,81 @@
 $(document).ready(function(){
     var wins = 0;
-    var loses = 0;
-    var scoreNum = Math.floor((Math.random() * 120) +19); //comp random number
+    var losses = 0;
+    var scoreNum = [] //comp random number
     var totalNum = 0;
    
     
-    //show random number for game and assign vaule
-    $("#ranNum").append(scoreNum).val(scoreNum)
-    console.log(ranNum.value + " rng")
 
-    //button1
-    $("#button1").val(Math.floor((Math.random() * 12) +1))
-    console.log(button1.value + " b1")
-
-    //button2
-    $("#button2").val(Math.floor((Math.random() * 12) +1))
-    console.log(button2.value + " b2")
+    //start of game function / reset function to create new random numbers.
+    function start(){
+        totalNum = 0;
+        scoreNum = Math.floor((Math.random() * 120) +19);
+        result = 0;
     
-    //button3
-    $("#button3").val(Math.floor((Math.random() * 12) +1))
-    console.log(button3.value + " b3")
+        //show random number for game and assign vaule
+        $("#ranNum").text(scoreNum).val(scoreNum)
+        console.log(ranNum.value + " ranNum")
 
-    //button4        
-    $("#button4").val(Math.floor((Math.random() * 12) +1))
-    console.log(button4.value + " b4")
-     
-    
+        //button1
+        $("#button1").val(Math.floor((Math.random() * 12) +1))
+        console.log(button1.value + " b1")
+
+        //button2
+        $("#button2").val(Math.floor((Math.random() * 12) +1))
+        console.log(button2.value + " b2")
+        
+        //button3
+        $("#button3").val(Math.floor((Math.random() * 12) +1))
+        console.log(button3.value + " b3")
+
+        //button4        
+        $("#button4").val(Math.floor((Math.random() * 12) +1))
+        console.log(button4.value + " b4")
+      
+    }
+    start();
     //on button click add number value to total score.
     $(".btn").on("click", function(){
-       if(totalNum > 0){
-            result =(parseInt(this.value) + parseInt(totalNum))
+       if(totalNum < scoreNum){
+           var cbtnval = parseInt(this.value)
+           
+           totalNum = totalNum + cbtnval
             
-            $("#userNum").text(result);
+                      
+            console.log(this.value + " btn value")
+            console.log(totalNum + " total value")
             
-       }else if(totalNum === 0){
-        totalNum = $(this).val();
+
+            $("#userNum").text(totalNum);
+
+
+        }if(totalNum === scoreNum){      //if Total = score then add to wins, reset. 
+          
+            wins++;
+
+            $(".winsDisplay").html(wins)
+                      
+        //reset function needed
+            return start();
+
         
-        $("#userNum").text(totalNum);
+        }if(totalNum > scoreNum){    //if total is greater than score add to loses, reset.
+            losses++;
+            $(".losesDisplay").html(losses);
+        
+
+        //reset function needed
+            return start();
+        }
         
         
-       }
     })       
 
-
+    
         
     
 
-    // if(ranNum.value === userNum.value){
-    //     wins++;
-    //     $("winsDisplay").html() = wins;
 
-    //     console.log(winsDisplay)
-
-    // }else if(userNum.value > ranNum.value){
-    //     losses--;
-    //     $("losesDisplay").html() = loses;
-
-    //     console.log(losesDisplay)
-    // }
 
 
 
@@ -72,3 +90,4 @@ $(document).ready(function(){
 
 
 })
+
