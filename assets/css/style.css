@@ -1,3 +1,8 @@
+*{
+    width: 100%;
+    max-width: 980px;
+}
+
 .numDisplay{
     padding: 8px;
     text-align: center;

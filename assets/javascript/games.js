@@ -28,13 +28,18 @@ $(document).ready(function(){
     
     //on button click add number value to total score.
     $(".btn").on("click", function(){
-       
+       if(totalNum > 0){
+            result =(parseInt(this.value) + parseInt(totalNum))
+            
+            $("#userNum").text(result);
+            
+       }else if(totalNum === 0){
         totalNum = $(this).val();
         
         $("#userNum").text(totalNum);
-
         
-
+        
+       }
     })       
 
 
