@@ -27,7 +27,8 @@ $(document).ready(function(){
      
     
     //on button click add number value to total score.
-    $(".btn").on("click", function(){   
+    $(".btn").on("click", function(){
+       
         totalNum = $(this).val();
         
         $("#userNum").text(totalNum);
