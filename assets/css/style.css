@@ -1,0 +1,22 @@
+.numDisplay{
+    padding: 8px;
+    text-align: center;
+}
+
+.buttonRow{
+    padding: 0px;
+   text-align: center;
+}
+
+.gameCounter{
+    text-align: center;
+}
+
+.instructions{
+    padding: 25px;
+    
+}
+
+.beerRules{
+    text-align: center;
+}
