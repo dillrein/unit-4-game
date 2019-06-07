@@ -1,0 +1,46 @@
+*{
+    width: 100%;
+    max-width: 980px;
+}
+
+.numDisplay{
+    padding: 8px;
+    text-align: center;
+}
+
+.buttonRow{
+    padding: 0px;
+   text-align: center;
+}
+
+.gameCounter{
+    text-align: center;
+}
+
+.instructions{
+    padding: 25px;
+    
+}
+
+.beerRules{
+    text-align: center;
+}
+
+h1{
+    color: white !important; 
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+
+}
+
+.lead{
+    color: white;
+    
+}
+
+.headpiece{
+    background-image: url("https://s-i.huffpost.com/gen/2673630/images/o-POPULAR-BEERS-facebook.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beer Me</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+    
+    <div class="jumbotron jumbotron-fluid headpiece">
+        <div class="container ">
+          <h1 class="display-2">Brew Ha! Ha!</h1>
+          <p class="lead">How many beers can you drink?</p>
+        </div>
+    </div>
+
+    <div class="container row instructions">
+        <p class="beerRules col-12">
+            You will be given a random number at the start of the game.
+            There are four beers below.
+            <br>
+            By drinking (clicking) the beers you will add a specific amount of beer points to your total score.
+            <br>
+            You win the game by matching your total score to the random number.
+            <br>
+            You lose the game if your total score goes above the random number.
+           <br>
+            The value of each beer is hidden, and each time the game start the value of each beer will change.        
+        </p>
+    </div>
+    
+    <div class="container row numDisplay">
+        <div class="col-6">
+            <div class="row ">
+                <h4  value="">Random Number:</h4>
+                <h4 class="col-6" id="ranNum">0</h4>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row ">
+                <h4 class="col-6" >Total Score: </h4>
+                <h4 class="col-6" id="userNum">0</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class= "container row buttonRow">
+        <div  class = "col-3">
+            <img src="assets/images/13469663 - Copy (2).jpg" type="button" id="button1" class="btn" style="height: 100px; width: 100px" value="" alt="button 1">
+
+        </div>
+        
+        <div  class = "col-3">
+            <img src="assets/images/13469663 - Copy.jpg" type="button" id="button2" class="btn" style="height: 100px; width: 100px" value="" alt="button 1">
+    
+        </div>
+        
+        <div  class = "col-3">
+            <img src="assets/images/13469663 - Copy (3).jpg" type="button" id="button3"  class="btn" style="height: 100px; width: 100px" value="" alt="button 1">
+    
+        </div>
+
+        <div  class = "col-3">
+            <img src="assets/images/13469663.jpg" type="button" id="button4" class="btn" style="height: 100px; width: 100px" value="" alt="button 1">
+    
+        </div>
+
+    </div>
+    <br><br>
+    <div class= "container row gameCounter">
+        <div class="col-6">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Wins:
+                    <span class="badge badge-primary badge-pill winsDisplay">0</span>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Loses:
+                    <span class="badge badge-primary badge-pill losesDisplay">0</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="assets/javascript/games.js"></script>
+</body>
+</html>
